@@ -5,11 +5,15 @@ import template from './template.njk';
  * @param {object} args 
  */
 function Header(args) {
+
+  if (!args) {
+    throw new Error('Invalid argument');
+  }
   
   return template.render({ 
     content: {
-      title: args.title,
-      description: args.description
+      title: args.title || '',
+      description: args.description || ''
     }
   });
   
