@@ -1,0 +1,15 @@
+<ul class="rankings">
+
+  {% for item in data %}
+  <li class="list-item">
+    <strong>{{ item.rank }}</strong>
+    <div class="">
+      <a href="">{{ item.name }}</a>
+      <div>
+        <strong>Location:</strong> {{ item.location }}
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+
+</ul>
