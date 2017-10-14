@@ -27,6 +27,8 @@ class App {
 
   switchData() {
 
+    window.scroll(0, 0);
+
     this.toggle = !this.toggle;
     this.data = require(`../data/data-${ !this.toggle ? 1 : 2 }.json`);
 
