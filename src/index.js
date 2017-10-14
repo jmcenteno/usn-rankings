@@ -1,4 +1,4 @@
-require('main.scss');
+import 'main.scss';
+import App from './app';
 
-const MainTemplate = require('./main.njk');
-document.getElementById('content').innerHTML = MainTemplate.render({});
+document.getElementById('content').innerHTML = App;
