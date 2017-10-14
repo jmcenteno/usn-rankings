@@ -1,0 +1,24 @@
+<div class="">
+  <div class="">
+    {% block header %}
+      {{ header | safe }}
+    {% endblock %}
+    <div class="">
+      <div>
+        {% block badge %}
+        {{ badge | safe }}
+        {% endblock %}
+      </div>
+      <div class="">
+        {% block rankings %}
+        {{ rankings | safe }}
+        {% endblock %}
+      </div>
+    </div>
+  </div>
+  <div class="">
+    {% block advertisement %}
+    {{ advertisement | safe }}
+    {% endblock %}
+  </div>
+</div>
