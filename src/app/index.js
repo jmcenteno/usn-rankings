@@ -45,7 +45,7 @@ class App {
         this.render();
       })
       .catch((error) => {
-        throw new Error(error.message);
+        throw error;
       });
 
   }

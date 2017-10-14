@@ -20,7 +20,7 @@ export default function init() {
 
     })
     .catch((error) => {
-      throw new Error(error.message);
+      throw error;
     });
 
 }

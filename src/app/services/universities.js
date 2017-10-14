@@ -70,9 +70,9 @@ class UnivertiesService {
         resolve(list);
 
       } else {
-  
-        reject({ message: 'data not found' });
-  
+
+        reject(new Error('Could not obtain data'));
+
       }
 
     });
