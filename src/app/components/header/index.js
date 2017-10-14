@@ -2,7 +2,7 @@ import template from './template.njk';
 
 /**
  * Header component
- * @param {object} args 
+ * @param {object} args { title, description }
  */
 function Header(args) {
 

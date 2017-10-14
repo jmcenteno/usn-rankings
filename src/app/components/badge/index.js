@@ -2,7 +2,7 @@ import template from './template.njk';
 
 /**
  * Badge component
- * @param {object} args 
+ * @param {object} args { src, alt }
  */
 function Badge(args) {
 
