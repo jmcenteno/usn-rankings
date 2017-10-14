@@ -20,7 +20,11 @@ export default function init() {
 
     })
     .catch((error) => {
+
+      rootElement.innerHTML = 'Your request cannot be processed at this time';
+
       throw error;
+
     });
 
 }

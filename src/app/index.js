@@ -7,6 +7,10 @@ class App {
 
   constructor(element, data) {
 
+    if (!element || !(element instanceof Element) || !data) {
+      throw new Error('Invalid constructor arguments');
+    }
+
     if (!instance) {
       instance = this;
     }
