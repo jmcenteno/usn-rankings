@@ -11,7 +11,7 @@ import template from './template.njk';
  * Main application layout
  * @param {object} data An object that represents a group of universities
  */
-function Layout(data) {
+function Layout(data = {}) {
 
   return template.render({
     header: Header({
