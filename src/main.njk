@@ -1,0 +1,48 @@
+{###############################}
+{#      Start Instructions     #}
+{###############################}
+
+<h2>Instructions</h2>
+
+<p>
+    The task is to build a responsive webpage (mocks below) using the <a href="https://mozilla.github.io/nunjucks/">Nunjucks</a>
+    templating library, the json files in the data folder, the sass modules in the sass folder, and any necessary
+    js/scss you write yourself.
+</p>
+
+<h3>Mocks for 3 breakpoints</h3>
+
+<ol>
+  <li class="instruction"><a href="/img/320-to-767.png">Up to 767px</a></li>
+  <li class="instruction"><a href="/img/768-to-1199.png">768 to 1199</a></li>
+  <li class="instruction"><a href="/img/1200-and-up.png">1200 and up</a></li>
+</ol>
+<br>
+
+<p>
+    This app is using Webpack and most of it is setup already.
+<p>
+
+{% set instructions = [
+    'Use the html provided in solution.njk to get started',
+    'Using nunjucks, display the data from the <code>src/data/data-1.json</code> file on page load',
+    'Add js and html so that clicking a "toggle" button will dynamically toggle the view showing data from <code>src/data/data-2.json</code>',
+    'Feel free to make use of any libraries to implement these requirements'
+  ]
+%}
+
+<ol>
+  {% for instruction in instructions %}
+  <li class="instruction">{{ instruction | safe }}</li>
+  {% endfor %}
+</ol>
+
+<p class="hint"><em>
+  Use the html in solution.njk to get started. Hint: You do not have to change the structure of the
+  html at all to successfully complete the project. You need to add classes on the appropriate
+  elements using the <a href="http://flexboxgrid.com/">flexboxgrid library</a>.
+</em></p>
+
+{###############################}
+{#       End Instructions      #}
+{###############################}
