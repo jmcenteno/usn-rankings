@@ -63,6 +63,9 @@ class UnivertiesService {
         // create an array of University objects
         const rankings = (data[id].rankings || []).map(item => new University(item));
 
+        // ...and sort it by rank
+        rankings.sort((a, b) => a.rank - b.rank);
+
         // create a UniversityList object
         // merge ranking with data object
         const list = new UniversityList(Object.assign({}, data[id], { rankings }));
