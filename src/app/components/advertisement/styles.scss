@@ -1,0 +1,14 @@
+.advertisement {
+  margin: 16px 0;
+  text-align: center;
+  
+  @media (min-width: 1200px) {
+    text-align: left;
+  }
+
+  .add {
+    width: 100%;
+    max-width: 300px;
+  }
+
+}
