@@ -1,24 +1,24 @@
 <article class="wrapper">
   <div class="container-fluid">
     <div class="row">
-      <section class="col-lg-8">
+      <section class="col-lg-9">
         {% block header %}
           {{ header | safe }}
         {% endblock %}
         <div class="row">
-          <div class="col-lg-4">
+          <div class="col-lg-5">
             {% block badge %}
             {{ badge | safe }}
             {% endblock %}
           </div>
-          <div class="col-lg-8 last">
+          <div class="col-lg-7 last">
             {% block rankings %}
             {{ rankings | safe }}
             {% endblock %}
           </div>
         </div>
       </section>
-      <aside class="col-lg-4 col-xs-12 last">
+      <aside class="col-lg-3 col-xs-12 last">
         {% block advertisement %}
         {{ advertisement | safe }}
         {% endblock %}

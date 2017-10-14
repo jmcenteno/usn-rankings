@@ -1,6 +1,7 @@
 .badge {
   display: none;
   width: 100%;
+  max-width: 260px;
 
   @media (min-width: 768px) {
     display: block;
