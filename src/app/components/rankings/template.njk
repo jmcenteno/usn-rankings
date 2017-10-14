@@ -2,9 +2,9 @@
 
   {% for item in data %}
   <li class="list-item">
-    <strong>{{ item.rank }}</strong>
-    <div class="">
-      <a href="">{{ item.name }}</a>
+    <strong>#{{ item.rank }}</strong>
+    <div class="institution">
+      <a href="{{ item.url }}">{{ item.institution }}</a>
       <div>
         <strong>Location:</strong> {{ item.location }}
       </div>
