@@ -17,7 +17,8 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: 'src' },
       { from: 'img' }
-    ])
+    ]),
+    new webpack.HotModuleReplacementPlugin()
   ],
   // plugins: [
   //   new webpack.optimize.UglifyJsPlugin({
