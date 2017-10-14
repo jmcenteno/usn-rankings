@@ -1,15 +1,23 @@
 import Layout from './components/layout';
-import data from '../data/data-1.json';
+import Universities from './services/universities';
+
+let instance = null;
 
 class App {
 
-  constructor(element) {
+  constructor(element, data) {
+
+    if (!instance) {
+      instance = this;
+    }
 
     this.rootElement = element;
     this.data = data;
     this.toggle = false;
 
     this.switchData = this.switchData.bind(this);
+
+    return instance;
 
   }
 
@@ -30,9 +38,15 @@ class App {
     window.scroll(0, 0);
 
     this.toggle = !this.toggle;
-    this.data = require(`../data/data-${ !this.toggle ? 1 : 2 }.json`);
 
-    this.render();
+    Universities.get(!this.toggle ? 1 : 2)
+      .then((data) => {
+        this.data = data;
+        this.render();
+      })
+      .catch((error) => {
+        throw new Error(error.message);
+      });
 
   }
 

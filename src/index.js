@@ -1,13 +1,27 @@
-import 'main.scss';
+import './main.scss';
 import App from './app';
+import Universities from './app/services/universities';
 
-export function init() {
+export default function init() {
 
-  const app = new App(
-    document.getElementById('content')
-  );
+  const rootElement = document.getElementById('content');
 
-  app.render();
+  rootElement.innerHTML = 'Please wait...';
+
+  Universities.get(1)
+    .then((data) => {
+
+      const app = new App(
+        rootElement,
+        data
+      );
+
+      app.render();
+
+    })
+    .catch((error) => {
+      throw new Error(error.message);
+    });
 
 }
 
