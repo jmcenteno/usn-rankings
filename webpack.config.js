@@ -63,9 +63,9 @@ module.exports = {
     // paths webpack has to look through will slow down the
     // compile process.
     modulesDirectories: [
-      "",
-      "src",
-      "node_modules"
+      '',
+      'src',
+      'node_modules'
     ]
   }
-}
+};

@@ -11,7 +11,7 @@ function Badge(args = { src: '', alt: '' }) {
     throw new Error('Invalid argument');
   }
 
-  return template.render({ 
+  return template.render({
     img: {
       src: args.src || '',
       alt: args.alt || ''

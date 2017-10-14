@@ -9,14 +9,14 @@ function Header(args = { title: '', description: '' }) {
   if (!args) {
     throw new Error('Invalid argument');
   }
-  
-  return template.render({ 
+
+  return template.render({
     content: {
       title: args.title || '',
       description: args.description || ''
     }
   });
-  
+
 }
 
 export default Header;

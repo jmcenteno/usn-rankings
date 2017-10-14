@@ -55,44 +55,45 @@ class UnivertiesService {
   get(id) {
 
     return new Promise((resolve, reject) => {
-      
+
       let data = null;
 
       // ideally, the data would come from an API
       // since require() doesn't work with dynamic strings, we need a switch statement to get the 
       // data files depending on the value of id
       switch (id) {
-        
-        case 1 :
+
+        case 1:
           data = require('../../data/data-1.json');
           break;
 
-        case 2 :
+        case 2:
           data = require('../../data/data-2.json');
           break;
 
         // ...and so forth :(
 
+        default:
+          data = null;
+
       }
-  
+
       if (data) {
 
         // create an array of University objects
-        const rankings = (data.rankings || []).map((item) => {
-          return new University(item);
-        });
+        const rankings = (data.rankings || []).map(item => new University(item));
 
         // create a UniversityList object
         const list = new UniversityList(Object.assign({}, data, { rankings }));
-  
+
         resolve(list);
-  
+
       } else {
   
         reject({ message: 'data not found' });
   
       }
-  
+
     });
 
   }
