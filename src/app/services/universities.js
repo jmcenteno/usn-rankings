@@ -1,3 +1,5 @@
+import data from '../../data';
+
 /**
  * An object to represent a list of universities
  * @param {object} args Map that contains list attributes { ranking, description, badge, rankings }
@@ -56,35 +58,14 @@ class UnivertiesService {
 
     return new Promise((resolve, reject) => {
 
-      let data = null;
-
-      // ideally, the data would come from an API
-      // since require() doesn't work with dynamic strings, we need a switch statement to get the 
-      // data files depending on the value of id
-      switch (id) {
-
-        case 1:
-          data = require('../../data/data-1.json');
-          break;
-
-        case 2:
-          data = require('../../data/data-2.json');
-          break;
-
-        // ...and so forth :(
-
-        default:
-          data = null;
-
-      }
-
-      if (data) {
+      if (data[id]) {
 
         // create an array of University objects
-        const rankings = (data.rankings || []).map(item => new University(item));
+        const rankings = (data[id].rankings || []).map(item => new University(item));
 
         // create a UniversityList object
-        const list = new UniversityList(Object.assign({}, data, { rankings }));
+        // merge ranking with data object
+        const list = new UniversityList(Object.assign({}, data[id], { rankings }));
 
         resolve(list);
 
