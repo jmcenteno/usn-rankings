@@ -2,8 +2,8 @@
  * An object to represent a list of universities
  * @param {object} args Map that contains list attributes { ranking, description, badge, rankings }
  */
-export function UniversityList(args = { ranking, description, badge, rankings: [] }) {
-  
+export function UniversityList(args = { ranking: '', description: '', badge: '', rankings: [] }) {
+
   // define object properties
   Object.keys(args).forEach((key) => {
     Object.defineProperty(this, key, {
@@ -18,7 +18,7 @@ export function UniversityList(args = { ranking, description, badge, rankings: [
  * An object to represent a single university
  * @param {object} args Map that contains university attributes { rank, institution, location }
  */
-export function University(args = { rank, institution, location }) {
+export function University(args = { rank: 0, institution: '', location: '' }) {
 
   // define object properties
   Object.keys(args).forEach((key) => {
