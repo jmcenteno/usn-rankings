@@ -11,7 +11,7 @@ function Badge(args) {
   }
 
   return template.render({ 
-    badge: {
+    img: {
       src: args.src || '',
       alt: args.alt || ''
     }
