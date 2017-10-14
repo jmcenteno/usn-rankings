@@ -1,0 +1,9 @@
+.badge {
+  display: none;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+
+}

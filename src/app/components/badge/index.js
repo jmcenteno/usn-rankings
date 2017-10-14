@@ -1,4 +1,5 @@
 import template from './template.njk';
+import './styles.scss';
 
 /**
  * Badge component
