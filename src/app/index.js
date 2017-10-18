@@ -45,8 +45,10 @@ class App {
 
     Universities.get(!this.toggle ? 1 : 2)
       .then((data) => {
+
         this.data = data;
         this.render();
+        
       })
       .catch((error) => {
         throw error;

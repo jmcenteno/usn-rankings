@@ -67,7 +67,7 @@ class UnivertiesService {
         rankings.sort((a, b) => a.rank - b.rank);
 
         // create a UniversityList object
-        // merge ranking with data object
+        // merge rankings with data object
         const list = new UniversityList(Object.assign({}, data[id], { rankings }));
 
         resolve(list);
